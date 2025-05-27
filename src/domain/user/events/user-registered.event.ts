@@ -1,5 +1,6 @@
 import { DomainEvent } from '@domain/shared';
-import { Email, UserId } from '@domain/user/value-objects';
+import { UserId } from '../value-objects/user-id';
+import { Email } from '../value-objects/email';
 
 /**
  * @class UserRegisteredEvent
@@ -8,7 +9,7 @@ import { Email, UserId } from '@domain/user/value-objects';
  * This is an immutable domain event.
  */
 export class UserRegisteredEvent implements DomainEvent {
-  public readonly eventName: string = 'UserRegisteredEvent';
+  public readonly eventName: string = 'user.registered'; // Changed from 'UserRegisteredEvent'
   public readonly occurredAt: Date;
   public readonly userId: UserId;
   public readonly email: Email;

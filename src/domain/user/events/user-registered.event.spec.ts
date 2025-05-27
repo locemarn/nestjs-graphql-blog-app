@@ -12,7 +12,7 @@ describe('UserRegisteredEvent', () => {
     const event = new UserRegisteredEvent(userId, email, registeredAt);
 
     expect(event).toBeInstanceOf(UserRegisteredEvent);
-    expect(event.eventName).toBe('UserRegisteredEvent');
+    expect(event.eventName).toBe('user.registered');
     expect(event.userId).toBe(userId);
     expect(event.email).toBe(email);
     expect(event.registeredAt).toBe(registeredAt);
@@ -21,7 +21,7 @@ describe('UserRegisteredEvent', () => {
 
   it('should have a distinct event name', () => {
     const event = new UserRegisteredEvent(userId, email, registeredAt);
-    expect(event.eventName).toBe('UserRegisteredEvent');
+    expect(event.eventName).toBe('user.registered');
   });
 
   it('should set occurredAt to a Date instance', () => {

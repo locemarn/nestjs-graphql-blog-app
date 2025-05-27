@@ -9,7 +9,7 @@ import { Email } from '../value-objects/email';
  * This is an immutable domain event.
  */
 export class UserUpdatedEvent implements DomainEvent {
-  public readonly eventName: string = 'UserUpdatedEvent';
+  public readonly eventName: string = 'user.updated';
   public readonly occurredAt: Date;
   public readonly userId: UserId;
   public readonly oldEmail?: Email;

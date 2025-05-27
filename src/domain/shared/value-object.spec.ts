@@ -26,8 +26,6 @@ describe('ValueObject', () => {
     const props: TestProps = { value: 'test', count: 1 };
     const vo = new TestValueObject(props);
 
-    console.log(vo)
-
     // Attempt to modify the original props object
     props.value = 'modified';
     expect(vo.getValue()).toBe('test');

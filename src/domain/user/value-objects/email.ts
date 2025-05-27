@@ -1,4 +1,4 @@
-import { ValueObject } from '@domain/shared';
+import { ValueObject } from '../../shared';
 
 interface EmailProps {
   value: string;
@@ -37,6 +37,7 @@ export class Email extends ValueObject<EmailProps> {
     if (!Email.isValidEmail(lowercasedEmail)) {
       throw new Error('Invalid email format.');
     }
+    const e = new Email({ value: lowercasedEmail });
     return new Email({ value: lowercasedEmail });
   }
 
